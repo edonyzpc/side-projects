@@ -11,4 +11,8 @@ jobs:
     - run: echo "🚀 shadow walker actions"
     - run: python3 --version
     - uses: actions/checkout@v3
-    - run: python3 sitemap-parser/sitemap-parse.py
+    - run: python3 sitemap-parser/sitemap-parse.py > post.md
+    - uses: actions/upload-artifact@v3
+      with:
+        name: post.md
+        path: post.md

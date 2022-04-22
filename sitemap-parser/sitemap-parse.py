@@ -13,7 +13,7 @@ if __name__ == "__main__":
     posts = []
     for item in dom_tree.getElementsByTagName("url"):
         post = item.childNodes[0].childNodes[0].data
-        print(post)
+        print(f"- {post}")
         posts.append(post)
 
-    print(f"total post: {len(posts)}")
+    print(f"- total posts: {len(posts)}")
