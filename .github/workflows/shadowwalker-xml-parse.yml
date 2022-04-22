@@ -1,10 +1,14 @@
 name: Shadow Walker Actions
 on:
+  push:
+    branches: [master]
   schedule:
-    - cron: '0 0 * * *'
+  - cron: '0 0 * * *'
 jobs:
   Shadow-Walker-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🚀 shadow walker actions"
-      - run: python3 --version
+    - run: echo "🚀 shadow walker actions"
+    - run: python3 --version
+    - uses: actions/checkout@v3
+    - run: python3 sitemap-parser/sitemap-parse.py
