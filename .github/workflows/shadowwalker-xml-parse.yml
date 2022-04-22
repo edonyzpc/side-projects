@@ -14,5 +14,5 @@ jobs:
     - run: python3 sitemap-parser/sitemap-parse.py > post.md
     - uses: actions/upload-artifact@v3
       with:
-        name: post.md
+        name: posts
         path: post.md
