@@ -1,0 +1,10 @@
+name: Shadow Walker Actions
+on:
+  schedule:
+    - cron: '0 0 * * *'
+jobs:
+  Shadow-Walker-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🚀 shadow walker actions"
+      - run: python3 --version
